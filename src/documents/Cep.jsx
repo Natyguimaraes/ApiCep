@@ -18,7 +18,7 @@ function Cep() {
                 setEndereco(null);
             }
         } catch (error) {
-            setErro('Ocorreu um erro ao buscar o CEP');
+            setErro('Ocorreu um erro ao buscar o CEP, verifique se o CEP está correto');
             setEndereco(null);
         }
     };
@@ -26,8 +26,8 @@ function Cep() {
     return (
         <div>
             <div className="formulario">
-            <h1>Candidatar-se</h1>
                 <form>
+                <h1>Candidatar-se</h1>
                     <label>Nome Completo</label>
                     <input type="text" placeholder="Digite seu nome completo" />
                     <label>Data de Nascimento</label>
@@ -36,7 +36,7 @@ function Cep() {
                     <input type="tel" />
                     <label>CEP</label>
                     <input type="text" value={cep} onChange={(e) => setCep(e.target.value)} placeholder="Digite o CEP" />
-                    <button type="button" onClick={buscarCep}>Buscar</button>
+                    <button type="button" className="button_buscar" onClick={buscarCep}>Buscar</button>
                     {erro && <span>{erro}</span>} <br></br>
                     <label>CEP</label>
                     <input value={endereco ? endereco.cep : ''} readOnly />
