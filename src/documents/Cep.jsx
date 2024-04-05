@@ -30,6 +30,8 @@ function Cep() {
                 <h1>Candidatar-se</h1>
                     <label>Nome Completo</label>
                     <input type="text" placeholder="Digite seu nome completo" />
+                    <label>E-mail</label>
+                    <input type="text" placeholder="Digite seu email" />
                     <label>Data de Nascimento</label>
                     <input type="date" /> <br></br>
                     <label>Telefone</label>
@@ -49,7 +51,7 @@ function Cep() {
                     <label>Estado</label>
                     <input value={endereco ? endereco.uf : ''} readOnly />
                     <div className="botao-enviar">
-            <button type="submit">Enviar</button>
+            <button type="submit">Enviar para o meu whatsApp </button>
         </div>
                 </form>
             </div>
