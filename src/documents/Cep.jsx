@@ -8,7 +8,7 @@ function Cep() {
 
     const buscarCep = async () => {
         try {
-            const response = await fetch(`https://viacep.com.br/ws/${cep}/json`);
+            const response = await fetch(`https://viacep.com.br/ws/${cep}/json`);//fetch usado só para buscar dados
             const data = await response.json();
             if (response.ok) {
                 setEndereco(data);
@@ -50,10 +50,10 @@ function Cep() {
                     <input value={endereco ? endereco.localidade : ''} readOnly />
                     <label>Estado</label>
                     <input value={endereco ? endereco.uf : ''} readOnly />
-                    <div className="botao-enviar">
+                     <div className="botao-enviar">
             <button type="submit">Enviar para o meu whatsApp </button>
         </div>
-                </form>
+            </form>
             </div>
         </div>
     );
